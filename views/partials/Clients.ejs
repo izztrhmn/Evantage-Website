@@ -1,0 +1,94 @@
+
+
+
+<!-- ======= Clients Section ======= -->
+<section id="subscribe">
+
+    <h3 class="section-title">Our Clients</h3>
+      <div class="section-title-divider"></div>
+        
+
+      <div class="logos">
+        <div class="logos-slide">
+          
+          <img src="/views/assets/img/client/Etika.webp" alt="Etika" loading="lazy">
+          <img src="/views/assets/img/client/KPJ.webp" alt="KPJ" loading="lazy">
+          <img src="/views/assets/img/client/Mewah.webp" alt="Mewah Oil" loading="lazy">
+          <img src="/views/assets/img/client/Perodua.webp" alt="Perodua" loading="lazy">
+          <img src="/views/assets/img/client/QSRBrands.webp" alt="QSR" loading="lazy">
+          <img src="/views/assets/img/client/Sunway.webp" alt="Sunway" loading="lazy">
+          <img src="/views/assets/img/client/UMSC.webp" alt="UMSC" loading="lazy">
+        </div>
+      </div>
+      
+      <!--Line Seperator-->
+      <div class="divider-line"></div>
+      
+
+      <script>
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector(".logos").appendChild(copy);
+      </script>
+
+  </section>
+  <!-- End Clients Section -->
+
+<style>
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.divider-line {
+    width: 85%;
+    height: 3px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: linear-gradient(90deg, transparent, #4169E1, transparent);
+}
+
+.logos {
+  overflow: hidden;
+  padding:  0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+</style>

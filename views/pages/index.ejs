@@ -1,0 +1,398 @@
+
+<%- include('../partials/Script'); %>
+
+<body>
+  <%- include('../partials/NavBar'); %>
+
+  <!-- ======= Solution Section ======= -->
+  <section id="solution">
+    <div class="container hero-content">
+        <div class="hero-text" data-aos="fade-right">
+          <!-- <h3>CMMS Maintenance Software</h3>-->
+          <h1>Top-tier <span style="background: linear-gradient(to right, #00aaff, #0066cc, #003366); -webkit-background-clip: text; color: transparent;">CMMS</span>
+            for Planning, Tracking & Optimizing Maintenance Operations</h1>
+          <p>Evantage provides cutting-edge CMMS maintenance solutions designed to streamline operations, enhance asset performance, and transform actionable insights into impactful results.</p>
+          <a class="btnlearnmore" href="#Feature">Learn More</a>
+        </div>
+        <div class="bgimg" data-aos="fade-left">
+            <img src="/views/assets/img/Banner/HomePage.webp" alt="CMMS Malaysia">
+        </div>
+    </div>
+  </section>
+  <!-- ======= End Section Solution ======= -->
+
+  <!-- Clients -->
+
+  <%- include('../partials/Clients'); %>
+
+  <!-- Intro -->
+   <!--
+    <section id="about">
+      <div class="hero-container" data-aos="fade-down">
+        <h1>Manage  maintenance <p>activity in one place</h1>
+        <h2>Evantage provides features to centralizes maintenance activity to be productive and proactive.</h2>
+        <div class="actions">
+          <a href="#demo" class="btn-get-started">Learn More</a>
+      </div>
+    </section>-->
+  <!-- End Of Intro -->
+
+    <section id="Feature">
+    <div class="container" data-aos="fade-down">
+      <div class="containerbox" id="btn-row" >
+        <button class="btn-col active" onclick="openTab('b1');"><i class="material-symbols-outlined">home_work</i><h5>Asset Management</h5></button>
+        <button class="btn-col" onclick="openTab('b2');"><i class="material-symbols-outlined">construction</i><h5>Work Management</h5></button>
+        <button class="btn-col" onclick="openTab('b3');"><i class="material-symbols-outlined">Engineering</i><h5>Preventive Maintenance</h5></button>
+        <button class="btn-col" onclick="openTab('b4');"><i class="material-symbols-outlined">build</i><h5>Spare Parts Management</h5></button>
+        <button class="btn-col" onclick="openTab('b5');"><i class="material-symbols-outlined">shopping_cart</i><h5>Procurement Management</h5></button>
+        <button class="btn-col" onclick="openTab('b6');"><i class="material-symbols-outlined">smart_toy</i><h5>AI-Driven CMMS</h5></button>
+        <button class="btn-col" onclick="openTab('b7');"><i class="material-symbols-outlined">qr_code_scanner</i><h5>QR Code Management</h5></button>
+        <button class="btn-col" onclick="openTab('b8');"><i class="material-symbols-outlined">query_stats</i><h5>Data Analytic</h5></button>
+        
+        <!-- Comment
+         <button class="btn-col" onclick="openTab('b9');"><i class="material-symbols-outlined">dashboard_customize</i><h5>Customizable dashboard</h5></button>
+        <button class="btn-col" onclick="openTab('b10');"><i class="material-symbols-outlined">photo_library</i><h5>Photo evidence</h5></button>
+        <button class="btn-col" onclick="openTab('b11');"><i class="material-symbols-outlined">mark_email_read</i><h5>Email notification</h5></button> -->
+      </div>
+
+      <div id="b1" class="viewer">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1" style="padding: 6%;">
+            <h2>Effortlessly Organize Your Assets</h2>
+            <p>Track your assets with the flexibility to monitor what you want, the way you want, for tens to millions of assets.</p>
+            <a href="feature-asset-management" class="get-started" >Get Started</a>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="/views/assets/img/Banner/Asset Management.webp" style="width: 100%;" alt="CMMS Asset Management">
+          </div>
+        </div>
+      </div>
+
+      <div id="b2" class="viewer"  style="display:none;">
+        <!-- If you want the ability to close the container, add a close button 
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>-->
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1" style="padding: 6%;"  data-aos="zoom-in">
+            <h2>Manage maintenance activity in one place</h2>
+            <p>Evantage helps you centralize tasks, set priorities, and track team progress with ease. Stay organized and proactive in every maintenance workflow.</p>
+            <a href="feature-work-management" class="get-started" >Get Started</a>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+            <img src="/views/assets/img/Banner/Work Management.webp" style="width: 100%;" alt="CMMS Malaysia">
+          </div>
+        </div>
+      </div>
+
+      <div id="b3" class="viewer" style="display:none;">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1" style="padding: 6%;">
+            <h2>Plan, execute, and track Preventive Maintenance</h2>
+            <p>Preventive maintenance (PM) involves routine, scheduled maintenance to prevent equipment failure, reduce downtime, and extend asset lifespan.</p>
+            <a href="feature-preventive-maintenance" class="get-started" >Get Started</a>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="/views/assets/img/Banner/Preventive Maintenance.webp" style="width: 100%;" alt="CMMS Preventive Maintenance">
+          </div>
+        </div>
+      </div>
+
+      <div id="b4" class="viewer" style="display:none;">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1" style="padding: 6%;">
+            <h2>Manage Spare Parts Effortlessly</h2>
+            <p>Keep track of all spare parts, monitor stock levels, and ensure timely availability to reduce downtime and optimize maintenance efficiency.</p>
+            <a href="feature-sparepart-management" class="get-started">Get Started</a>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="/views/assets/img/Banner/Spare Part Management.webp" style="width: 100%;" alt="Spare Part Management">
+          </div>
+        </div>
+      </div>
+
+
+      <div id="b5" class="viewer" style="display:none;">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1" style="padding: 6%;">
+            <h2>Streamline Your Procurement Process</h2>
+            <p>Manage purchase requests, approve orders efficiently, and maintain visibility of all procurement activities to save time and cost.</p>
+            <a href="feature-procurement-management" class="get-started">Get Started</a>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="/views/assets/img/Banner/Procurement Management.webp" style="width: 100%;" alt="Procurement Management">
+          </div>
+        </div>
+      </div>
+
+
+      <div id="b6" class="viewer" style="display:none;">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1" style="padding: 6%;">
+            <h2>Smarter Maintenance With AI</h2>
+            <p>Leverage AI to analyze fault codes and work order details, suggest corrective actions, and help your technicians make faster, data-driven decisions.</p>
+            <a href="feature-ai-driven" class="get-started">Get Started</a>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="/views/assets/img/FeaturePage/AI-Driven/feature-AI-Driven-Resolution.webp" style="width: 100%;" alt="AI-Driven CMMS">
+          </div>
+        </div>
+      </div>
+
+      <div id="b7" class="viewer" style="display:none;">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1" style="padding: 6%;">
+            <h2>QR code for asset or inventory management</h2>
+            <p>Quickly identify equipment, spare part,  maintenance history  and maintenance procedure or a technical document by scanning the QR code.</p>
+            <a href="feature-QRcode-management" class="get-started" >Get Started</a>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="/views/assets/img/Banner/QR Code Management.webp" style="width: 100%;" alt="CMMS QR Code">
+          </div>
+        </div>
+      </div>
+
+      <div id="b8" class="viewer" style="display:none;">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1" style="padding: 6%;">
+            <h2>Easily analyze all maintenance data</h2>
+            <p>Show auditors reports of your controlled work order workflows that route work through supervisors or quality personnel.</p>
+            <a href="feature-data-analytic" class="get-started" >Get Started</a>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="/views/assets/img/Banner/Data Analytic.webp" style="width: 100%;" alt="CMMS Data Analytic">
+          </div>
+        </div>
+      </div>
+
+      
+
+      <!-- Comment
+       <div id="b9" class="viewer" style="display:none;">
+        <div class="row">
+          <div class="col-sm-6" style="padding: 6%;">
+            <h2>Customize dashboard views for different users and teams.</h2>
+            <p>With Evantage’s custom dashboard, create your own flexible time periods, filter information by groups, and access any data.</p>
+            <a href="feature-custom-dashboard" class="get-started" >Get Started</a>
+          </div>
+          <div class="col-sm-6">
+            <img src="/views/assets/img/ProductPage/DashboardCustom.png" style="width: 100%;" alt="CMMS Dashboard">
+          </div>
+        </div>
+      </div>
+
+      <div id="b10" class="viewer" style="display:none;">
+        <div class="row">
+          <div class="col-sm-6" style="padding: 6%;">
+            <h2>Capture photo & video to provide visual evidence.</h2>
+            <p>Using photo documentation is an effective approach to capturing and organizing visual data, which paves the way for more professional maintenance management.</p>
+            <a href="feature-photo-evidence" class="get-started" >Get Started</a>
+          </div>
+          <div class="col-sm-6">
+            <img src="/views/assets/img/ProductPage/PhotoEvidence.png" style="width: 100%;" alt="CMMS Photo Evidence">
+          </div>
+        </div>
+      </div>
+
+      <div id="b11" class="viewer" style="display:none;">
+        <div class="row">
+          <div class="col-sm-6" style="padding: 6%;">
+            <h2>Alerts and notification with email or app.</h2>
+            <p>Evantage CMMS automatically sends email notifications for important events to provide communication between maintenance and the user.</p>
+            <a href="feature-email-notification" class="get-started" >Get Started</a>
+          </div>
+          <div class="col-sm-6">
+            <img src="/views/assets/img/ProductPage/EmailNotification.png" style="width: 100%;" alt="CMMS Email Notification">
+          </div>
+        </div>
+      </div> 
+      -->
+
+    </div>
+    </section>
+
+
+    <!-- Start Software Development-->
+  <section id="Product">
+    <div class="container" data-aos="fade-down">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">SIMPLE AND POWERFUL SOFTWARE DEVELOPMENT</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Choose Evantage softwares suitable for the organisation.</p>
+        </div>
+      </div>
+      
+      <div class="row1">
+        <div class="col spaper border hadow shadow-large shadow-hover">
+          <a href="evantage-cmms-webcore" class="card" style="background-image: url(/views/assets/img/Homepage/Product/WebCore.webp);">
+          <div class="content">
+            <h4>CMMS Web Core</h3>
+              <p>Automate maintenance strategies with simplicity and power.</p>
+          </div>
+        </a>
+        </div>
+        <div class="col  spaper border hadow shadow-large shadow-hover">
+          <a href="evantage-cmms-webwork" class="card" style="background-image: url(/views/assets/img/Homepage/Product/WebWork.webp)">
+          <div class="content">
+            <h4>CMMS Web Work</h3>
+              <p>Request, monitor, and manage maintenance tasks easily.</p>
+          </div>
+          </a>
+        </div>
+        <div class="col  spaper border hadow shadow-large shadow-hover">
+          <a href="evantage-cmms-mobile-app" class="card" style="background-image: url(/views/assets/img/Homepage/Product/MobileApp.webp)">
+          <div class="content">
+            <h4>CMMS Mobile App</h3>
+              <p>Submit tasks, scan assets, capture images, and more.</p>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Software Development-->
+
+
+  <!-- Services-->
+  <section id="indexServices">
+    <div class="container" data-aos="fade-down">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Our Services</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Select the right Evantage solutions to optimize your operations and maintenance.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="border">
+            <i class="material-symbols-outlined">lightbulb</i>
+            <h3>Consultancy</h3>
+            <p>The expertise and guidance provided by an Evantage can significantly enhance the effectiveness of your asset management practices.</p>
+          </div>
+        </div>
+        <div class="col"> 
+          <div class="border">
+            <i class="material-symbols-outlined">manufacturing</i>
+            <h3>Software Development</h3>
+            <p>Build Custom CMMS Software to meet requirements across multiple use cases and locations to the way you manage maintenance.</p>
+          </div>  
+        </div>
+        <div class="col">
+          <div class="border">
+            <i class="material-symbols-outlined">integration_instructions</i>
+            <h3>Integration</h3>
+            <p>Integrate Evantage CMMS with SCADA, ERP, PLC or sensor to improve your maintenance ecosystem to streamline operations and maintenance processes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Services-->
+
+  <!-- Solution Every Industry-->
+  <section id="Industries">
+    <div class="container" data-aos="fade-down">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">CMMS SOLUTIONS IN DIFFERENT INDUSTRY</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Evantage provide services to fit your needs.</p>
+        </div>
+      </div>
+      <div class="rowsolution" id="rowsolution">
+        <a class="colsolution" href="cmms-facilitymanagement" >
+          <i class="material-symbols-outlined">home_work</i>
+          <h3>Facility Management</h2>
+          <p>Evantage facility management software able to make your maintenance team can plan for today, tomorrow, and beyond with agility and confidence.</p>
+        </a>
+        <a class="colsolution" href="cmms-healthcare" >
+          <i class="material-symbols-outlined">monitor_heart</i>
+          <h3>Healthcare</h2>
+          <p>Evantage CMMS Software is a valuable tool to prevent hospital equipment failure, improve regulatory compliance and increase productivity.</p>
+        </a>
+        <a class="colsolution" href="cmms-manufacturing" >
+          <i class="material-symbols-outlined">precision_manufacturing</i>
+          <h3>Manufacturing</h2>
+          <p>Evantage will have you the ability to meet all of your production and safety goals, all while keeping your downtime costs to a minimum.</p>
+        </a>
+        <a class="colsolution" href="cmms-foodbeverage" >
+          <i class="material-symbols-outlined">fastfood</i>
+          <h3>Food & Beverage</h2>
+          <p>Evantage CMMS tracking of Maintenance & Repair (M&R) activity in port to ensure minimum downtime to assets.</p>
+        </a>
+        <a class="colsolution" href="cmms-energyutility" >
+          <i class="material-symbols-outlined">flash_on</i>
+          <h3>Energy & Utility</h2>
+          <p>Evantage CMMS allow fleet maintenance company optimize the performance of the assets and your return on investment, analysis the breakdown and prevent it.</p>
+        </a>
+        <a class="colsolution" href="cmms-fleetmanagement" >
+          <i class="material-symbols-outlined">commute</i>
+          <h3>Fleet Management</h2>
+          <p>Evantage CMMS allow fleet maintenance company optimize the performance of the assets and your return on investment, analysis the breakdown and prevent it.</p>
+        </a>
+        <a class="colsolution" href="cmms-watertreatment" >
+          <i class="material-symbols-outlined">water_drop</i>
+          <h3>Water Treatment</h2>
+          <p>Evantage CMMS allows water treatment plants to plan effective preventive maintenance on equipment, grounds and entire facilities.</p>
+        </a>
+        <a class="colsolution" href="cmms-portharbour" >
+          <i class="material-symbols-outlined">directions_boat</i>
+          <h3>Port & Harbour</h2>
+          <p>Evantage CMMS tracking of Maintenance & Repair (M&R) activity in port to ensure minimum downtime to assets.</p>
+        </a>
+      </div>
+    <div class="button">
+      <button id="slideLeft" type="button" class="previous round">&#8249;</button>
+      <button id="slideRight" type="button" class="next round">&#8250;</button>
+    </div>
+    </div>
+  </section>
+  <!-- End Solution Every Industry-->
+
+  <script>
+    const buttonRight = document.getElementById('slideRight');
+    const buttonLeft = document.getElementById('slideLeft');
+    const container = document.getElementById('rowsolution');
+
+    const targetScrollAmount = window.innerWidth * 0.7; // 70% of viewport width
+
+    buttonRight.onclick = () => {
+        container.scrollBy({ left: targetScrollAmount, behavior: 'smooth' });
+    };
+
+    buttonLeft.onclick = () => {
+        container.scrollBy({ left: -targetScrollAmount, behavior: 'smooth' });
+    };
+  </script>
+  
+
+  <%- include('../partials/Contact'); %>
+
+  <%- include('../partials/Footer'); %>
+  
+  <script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("btn-row");
+    var btns = header.getElementsByClassName("btn-col");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+      function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("viewer");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      }
+  </script>
+      
+
+</body>
+
+</html>
