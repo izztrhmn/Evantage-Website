@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 const nodemailer = require('nodemailer');
+const { SitemapStream, streamToPromise } = require("sitemap");
+
 app.use(express.static(__dirname));
 
 
@@ -109,6 +111,66 @@ app.get('/Privacy-Policy', function(req, res) {
 app.get('/Terms-of-service', function(req, res) {
   res.render('pages/Terms-of-service');
 });
+
+// Sitemap route
+app.get("/sitemap.xml", async (req, res) => {
+  res.header("Content-Type", "application/xml");
+
+  const smStream = new SitemapStream({
+    hostname: "https://evantage.com.my" // 
+  });
+
+  // List all your public pages here
+  smStream.write({ url: "/", priority: 1.0 });
+  smStream.write({ url: "/evantage-cmms-webcore", priority: 0.9 });
+  smStream.write({ url: "/evantage-cmms-mobile-app", priority: 0.9 });
+  smStream.write({ url: "/evantage-cmms-webwork", priority: 0.9 });
+
+  smStream.write({ url: "/feature-work-management", priority: 0.8 });
+  smStream.write({ url: "/feature-preventive-maintenance", priority: 0.8 });
+  smStream.write({ url: "/feature-asset-management", priority: 0.8 });
+  smStream.write({ url: "/feature-QRcode-management", priority: 0.8 });
+  smStream.write({ url: "/feature-data-analytic", priority: 0.8 });
+  smStream.write({ url: "/feature-custom-dashboard", priority: 0.8 });
+  smStream.write({ url: "/feature-photo-evidence", priority: 0.8 });
+  smStream.write({ url: "/feature-email-notification", priority: 0.8 });
+  smStream.write({ url: "/feature-sparepart-management", priority: 0.8 });
+  smStream.write({ url: "/feature-procurement-management", priority: 0.8 });
+  smStream.write({ url: "/feature-ai-driven", priority: 0.8 });
+
+  smStream.write({ url: "/cmms-facilitymanagement", priority: 0.7 });
+  smStream.write({ url: "/cmms-healthcare", priority: 0.7 });
+  smStream.write({ url: "/cmms-manufacturing", priority: 0.7 });
+  smStream.write({ url: "/cmms-portharbour", priority: 0.7 });
+  smStream.write({ url: "/cmms-watertreatment", priority: 0.7 });
+  smStream.write({ url: "/cmms-energyutility", priority: 0.7 });
+  smStream.write({ url: "/cmms-fleetmanagement", priority: 0.7 });
+  smStream.write({ url: "/cmms-foodbeverage", priority: 0.7 });
+
+  smStream.write({ url: "/evantage-aboutus", priority: 0.6 });
+  smStream.write({ url: "/evantage-contactus", priority: 0.6 });
+  smStream.write({ url: "/Privacy-Policy", priority: 0.5 });
+  smStream.write({ url: "/Terms-of-service", priority: 0.5 });
+
+  smStream.end();
+
+  const sitemap = await streamToPromise(smStream);
+  res.send(sitemap.toString());
+});
+
+// Robots.txt route
+app.get("/robots.txt", (req, res) => {
+  res.type("text/plain");
+  res.send(
+`User-agent: *
+Disallow: /Counter
+Disallow: /api/
+Disallow: /internal/
+
+Sitemap: https://evantage.com.my/sitemap.xml`
+  );
+});
+
 
 app.listen(8080);
 console.log('Server is listening on port 8080');

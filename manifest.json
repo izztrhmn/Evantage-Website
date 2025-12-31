@@ -1,6 +1,6 @@
 {
-    "name": "Evantage",
-    "short_name": "CMMS",
+    "name": "Evantage CMMS",
+    "short_name": "Evantage",
     "description": "Plan, Track & Optimize your Operations",
     "start_url": "/",
     "display": "standalone",

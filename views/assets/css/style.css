@@ -1646,10 +1646,10 @@ grid-template-columns: repeat(1, 1fr); /* Exactly 3 columns */
   #Product .content{
     margin:20px;}
     #Product .card{
-      background-size: 60%;
+      background-size: 80%;
     }
     #Product .card:hover{
-      background-size: 70%;
+      background-size: 80%;
     }
 }
 
